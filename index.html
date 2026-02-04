@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cid | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,sans-serif;}
+body{background:#0a001a;color:#c299ff;line-height:1.6;}
+section{padding:60px 20px;max-width:1100px;margin:auto;}
+h1,h2,h3{margin-bottom:15px;color:#c299ff;}
+p{color:#ddd;}
+a{color:#c299ff;text-decoration:none;transition:.2s;}
+a:hover{color:#fff;}
+.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(135deg,#0a001a,#1b0033);padding:60px 20px;border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,0.7);}
+.hero-text h1{font-size:48px;font-weight:700;}
+.hero-text p{margin-top:10px;font-size:18px;}
+.buttons{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;}
+.btn{display:inline-block;padding:14px 22px;border-radius:10px;background:#220033;color:#c299ff;font-weight:500;transition:.3s;}
+.btn:hover{background:#440066;color:#fff;transform:translateY(-3px);}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;margin-top:30px;}
+.skill-card{background:#110022;border-radius:16px;padding:22px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.6);transition:.3s;}
+.skill-card:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(0,0,0,0.7);}
+.skill-card img{width:48px;height:48px;margin-bottom:12px;}
+.project-card{background:#110022;padding:24px;border-radius:20px;margin-bottom:40px;box-shadow:0 12px 30px rgba(0,0,0,0.7);transition:.3s;}
+.project-card:hover{transform:translateY(-5px);}
+.project-card p{margin-bottom:20px;}
+.screenshots{display:flex;gap:16px;overflow-x:auto;padding-bottom:14px;align-items:flex-start;scroll-behavior:smooth;}
+.screenshots img{flex:0 0 auto;height:220px;border-radius:16px;cursor:pointer;object-fit:cover;transition:.3s;}
+.screenshots img:hover{transform:scale(1.05);}
+.screenshots::-webkit-scrollbar{height:6px;}
+.screenshots::-webkit-scrollbar-thumb{background:#c299ff;border-radius:10px;}
+.viewer{position:fixed;inset:0;background:rgba(0,0,0,0.95);display:none;align-items:center;justify-content:center;z-index:999;transition:opacity 0.3s;}
+.viewer img{max-width:92%;max-height:82%;border-radius:16px;opacity:0;transition:opacity 0.3s;}
+.viewer button{position:absolute;background:rgba(51,0,51,0.5);border:none;color:#c299ff;font-size:22px;padding:14px 18px;border-radius:50%;cursor:pointer;transition:.2s;}
+.viewer button:hover{background:rgba(51,0,51,0.8);}
+.viewer .prev{left:20px;}
+.viewer .next{right:20px;}
+.viewer .close{top:20px;right:20px;font-size:18px;}
+.contact p,.contact a{margin-bottom:8px;display:block;}
+.contact a:hover{text-decoration:underline;}
+@media(max-width:600px){.hero-text h1{font-size:36px;}.screenshots img{height:160px;min-width:240px;}}
+@media(max-width:600px){
+  section {
+    padding:40px 16px;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>A. Sheik Asen</h1>
+    <p>BCA Final Year Student | Flutter & Full-Stack Developer</p>
+    <div class="buttons">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="resume.pdf" download class="btn">Download Resume</a>
+      <a href="https://github.com/cid0980" target="_blank" class="btn">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>About Me</h2>
+  <p>Final-year BCA student with hands-on experience in Flutter mobile app development and full-stack projects using Firebase and Node.js. Skilled at building functional apps, solving problems efficiently, and learning new tech quickly. Completed a college summer internship and multiple project-based full-stack apps.</p>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skill-grid">
+    <div class="skill-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzdViyTBLqA4UQ2nSO4omkrpKnCVLxRMjuqA&s" alt="HTML5"><p>HTML5</p></div>
+    <div class="skill-card"><img src="https://img-resize-cdn.joshmartin.ch/768x0%2Cc3537b9f46b5f6055fbc8b4cd03b6b2cc63fc2eefd3d8cd9f0c9f99a5933e496/https://joshmartin.ch/app/uploads/2017/10/css3.svg" alt="CSS3"><p>CSS3</p></div>
+    <div class="skill-card"><img src="https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2bdhjrdcykxcexqs3hr7.webp" alt="JavaScript"><p>JavaScript (ES6)</p></div>
+    <div class="skill-card"><img src="https://images.icon-icons.com/2108/PNG/512/flutter_icon_130936.png" alt="Flutter"><p>Flutter</p></div>
+    <div class="skill-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnNGJKXetUPaEA08BEOXhX7irgFwkJfm_qpA&s" alt="Node.js"><p>Node.js</p></div>
+    <div class="skill-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEN6fDm89O6g-B0h3eEPmVlxQyhlU1cNS7tQ&s" alt="MongoDB"><p>MongoDB</p></div>
+    <div class="skill-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuawUuQCcq6fD-KpdmL4QixUOyqQqdrVNIDg&s" alt="Firebase"><p>Firebase</p></div>
+    <div class="skill-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_VIOFJWA2qXyfO9L62QUFCx_eJUvyAtfrjw&s" alt="JWT"><p>JWT</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project-card">
+    <h3>ComicVerse (Internship)</h3>
+    <p>Flutter-based e-commerce simulation app for Manga, Novel, and Webtoon.</p>
+    <div class="screenshots">
+      <img src="projects/comic/homepage.jpg" alt="Homepage">
+      <img src="projects/comic/loginpage.jpg" alt="Login Page">
+      <img src="projects/comic/novelpage.jpg" alt="Novel Page">
+      <img src="projects/comic/novelpages.jpg" alt="Novels List">
+      <img src="projects/comic/seachpage.jpg" alt="Search Page">
+      <img src="projects/comic/cartspage.jpg" alt="Cart Page">
+      <img src="projects/comic/setteingpage.jpg" alt="Settings Page">
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>College Attendance App (BLUEMARK)</h3>
+    <p>Full-stack attendance system using Firebase with role-based access for Principal, HOD, Staff, and Students.</p>
+    <div class="screenshots">
+      <img src="projects/attendance/dash.jpg" alt="Dashboard">
+      <img src="projects/attendance/login.jpg" alt="Student List">
+      <img src="projects/attendance/1.jpg" alt="Attendance Page">
+      <img src="projects/attendance/1.jpg" alt="Attendance Page">
+      <img src="projects/attendance/2.jpg" alt="Attendance Page">
+      <img src="projects/attendance/3.jpg" alt="Attendance Page">
+      <img src="projects/attendance/4.jpg" alt="Attendance Page">
+      <img src="projects/attendance/5.jpg" alt="Attendance Page">
+      <img src="projects/attendance/6.jpg" alt="Attendance Page">
+      <img src="projects/attendance/7.jpg" alt="Attendance Page">
+      <img src="projects/attendance/8.jpg" alt="Attendance Page">
+      <img src="projects/attendance/9.jpg" alt="Attendance Page">
+      <img src="projects/attendance/10.jpg" alt="Attendance Page">
+      <img src="projects/attendance/11.jpg" alt="Attendance Page">
+      <img src="projects/attendance/12.jpg" alt="Attendance Page">
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>TUNO (Personal Project)</h3>
+    <p>WhatsApp-style chat app using Flutter + Firebase. Real-time messaging, Google authentication, profile & bio sync.</p>
+    <div class="screenshots">
+      <img src="projects/tuno/home.jpg" alt="API Placeholder">
+      <img src="projects/tuno/login.jpg" alt="Messaging Flow">
+      <img src="projects/tuno/edit.jpg" alt="Profile Flow">
+      <img src="projects/tuno/profile.jpg" alt="Profile Flow">
+      <img src="projects/tuno/set.jpg" alt="Profile Flow">
+      <img src="projects/tuno/chat.jpg" alt="Profile Flow">
+    </div>
+  </div>
+
+  <div class="project-card">
+    <h3>Food Delivery Backend</h3>
+    <p>Role-based backend using Node.js, Express, and MongoDB with JWT authentication, ready for frontend integration. View source code in GitHub link.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:asencid07@example.com">asencid07@example.com</a></p>
+  <p>Phone: <a href="tel:9952703183">9952703183</a></p>
+  <p>GitHub: <a href="https://github.com/cid0980" target="_blank">github.com/cid0980</a></p>
+  <p>Location: Villianur, Pondicherry</p>
+</section>
+
+
+<div class="viewer" id="viewer">
+  <button class="prev" onclick="changeImage(-1)">‹</button>
+  <img id="viewerImg" alt="Fullscreen preview">
+  <button class="next" onclick="changeImage(1)">›</button>
+  <button class="close" onclick="closeViewer()">✕</button>
+</div>
+
+<script>
+let galleryImages=[];let currentIndex=0;
+document.querySelectorAll('.screenshots img').forEach(img=>{
+  img.addEventListener('click',()=>{
+    const container=img.closest('.screenshots');
+    galleryImages=Array.from(container.querySelectorAll('img')).map(i=>i.src);
+    currentIndex=galleryImages.indexOf(img.src);
+    openViewer();
+  });
+});
+function openViewer(){
+  const viewer=document.getElementById('viewer');
+  const img=document.getElementById('viewerImg');
+  img.style.opacity=0;
+  viewer.style.display='flex';
+  img.src=galleryImages[currentIndex];
+  setTimeout(()=>{img.style.opacity=1;},10);
+}
+function closeViewer(){document.getElementById('viewer').style.display='none';}
+function changeImage(step){
+  currentIndex=(currentIndex+step+galleryImages.length)%galleryImages.length;
+  const img=document.getElementById('viewerImg');
+  img.style.opacity=0;
+  setTimeout(()=>{img.src=galleryImages[currentIndex];img.style.opacity=1;},100);
+}
+</script>
+
+</body>
+</html>
